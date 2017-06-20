@@ -1,0 +1,38 @@
+colors () { 
+ export GREY="\033[37m" #37m
+ export NON="\033[0m"
+ echo "$GREY+-----------------------+$NON "
+ echo "$GREY|$NON\033[040m  \033[0m \033[041m  \033[0m \033[042m  \033[0m \033[043m  \033[0m \033[044m  \033[0m \033[045m  \033[0m \033[046m  \033[0m \033[047m  \033[0m$GREY|$NON"
+ echo "$GREY+-----------------------+$NON "
+ echo "$GREY|$NON\033[100m  \033[0m \033[101m  \033[0m \033[102m  \033[0m \033[103m  \033[0m \033[104m  \033[0m \033[105m  \033[0m \033[106m  \033[0m \033[107m  \033[0m$GREY|$NON"
+ echo "$GREY+-----------------------+$NON "
+}
+
+
+
+zsh-HomeScreen () {
+        export LINE=+-----------------------------------+ 
+        export GREY="\033[37m"
+        export NON="\033[0m"
+        cd $HOME/Desktop
+        echo -e "$GREY"
+        clear
+        date "+_____%d/%m/%Y_____"
+        pwd;cal.2,1
+        colors
+        echo -e "$GREY$LINE $NON "
+        echo -e "$GREY|$NON  home  \033[32mBB$NON  \033[1;5;31m  root$NON           N     $GREY|$NON"
+        echo -e "$GREY$LINE $NON "
+        
+}
+
+
+nodot() {  echo "$1" | sed 's/\./ /g' ; }
+
+#ScreenHome () {
+#  if screen -list | awk '{print $1}' | grep -q "$1$"; then
+#    echo "screen $1 already exists" > &2
+#  else
+#    screen -d -m -S $1
+#  fi
+#}

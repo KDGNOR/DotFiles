@@ -1,0 +1,301 @@
+#! /bin/bash
+##############################
+## Aliases: ZSH and BASH !! ##
+##############################
+##  Basic Alias      ##
+#######################
+. ~/.home/.quick_aliases 
+. /sw/bin/init.sh
+#######################
+alias TmuxHome2="TmuxHome.sh"
+alias ScreenHome2="ScreenHome.sh"
+alias ,,,="TmuxHome2"
+alias cls="c ; ls"
+alias vpn="cd /usr/local/vpnserver"
+
+alias c="clear" #;tput bel" # most have so much :D
+alias p="pwd" # not relly use much but good to have if i wanned to be fast
+alias o="open" # open files in term for normal apps on mac #best on macosx
+alias O="o ." # Very Good ide i Got
+alias toych="touch" #hitError
+alias witch="which" #never Rember right word for it..
+alias mkdir="mkdir -v" # say it, do it #
+alias df="sudo df -H"
+# less used:
+alias list="ls -R"
+alias H="history" # forget i can do it :-/
+alias mv="mv -vi" # say it, do it #
+alias ls="ls -F" # use all the time # ls """
+alias cp="cp -iv" #not overwrirt?# # say it do it #
+alias cx="chmod +x"
+alias CH="chmod 777"
+alias ch="sudo chmod 777"
+
+alias .="pwd;ls"
+alias ..="pwd;ls -a"
+alias ...="cd .."
+
+alias la="ls -a" # allways see on Distros ;)
+# sudo do not give wany error at all!! Take Care!!!!
+alias rm="rmtrash" # DO NOT WORK WITH SUDO!! ## move it to Mac-Trash
+alias rm!="rm" # Normal rm - Unix Delete
+alias mv!="mv" # never uset
+alias la="ls -la"
+alias lr="ls -R"
+# and more..
+alias cp!="rsync -a --progress" # good if, not need to now
+alias ls.="file .*" # good too have not need to now
+alias ln="ln -i"
+#rsync -a --stats --progress SOURCE_FOLDER DESTINATION_FOLDER
+# if user is not root, pass all commands via sudo #
+if [ $UID -ne 0 ]; then
+    alias s="sudo"
+fi
+# sudo su
+
+##SCREEN##
+alias S="screen -dRR" # forcetoFirstLast"screen-Siseson"
+alias Sl="screen -ls"
+alias Sn="screen -S"
+#-#-#-#
+#-# bash login
+alias BB="bash -l"
+######################
+##                  ##
+##  Dots File Edit  ##
+##                  ##
+######################
+
+# Sublime_Text_2
+alias .enano="subl $HOME/.bash_aliases"
+alias .elnano="subl $HOME/.bash_login"
+alias .epnano="subl $HOME/.profile"
+alias .ebnano="subl $HOME/.bashrc"
+#alias e="subl" # Edit : CrossPlattForm TextEditor (mac,linux"windows")
+# can have
+alias .escreen="subl $HOME/.screenrc" # GNU-Screen-Config
+alias .eNano="subl $HOME/.profile2"
+### Specifying "-w" will cause the subl command to not exit until the file is closed.
+alias EE="subl -w"
+
+#-# VIM #-#
+alias .alias="vim $HOME/.home/.term_aliases" # for edit here :D
+# Edit With VIM
+alias e="vim"
+alias .q="vim $HOME/.home/.quick_aliases"
+alias .zvim="vim $HOME/.zshrc"
+alias .bvim="vim $HOME/.bashrc" # to bash outlog or root
+alias .balias="vim $HOME/.bash_aliases"
+alias .svim="vim $HOME/.screenrc"
+alias .vvim="vim $HOME/.vimrc"
+alias .tvim="vim $HOME/.tmux.conf"
+alias .fvim="vim $HOME/.home/.bash_functions"
+alias .vtmux="vim $HOME/.tmux.conf"
+alias .ffvim="vim $HOME/.home/.zsh_functions"
+alias .vemacs="vim $HOME/.emacs"
+alias .vscreen="vim $HOME/.screenrc"
+alias .vcsh="vim $HOME/.cshrc"
+# others
+#alias .txt.profile="open -e /Users/kdg/.profile" # Open .profile In Default TextEdit
+# other nano`s
+alias nano2="/usr/local/bin/nano-2.0.6" # like with one best :)
+alias nano3="nano2" # hmm do i need it? hehe:)
+# Reload Files
+alias RR="source $HOME/.home/.term_aliases && source $HOME/.home/.quick_aliases"
+
+##################
+####          ####
+#### MAC OS X ####
+####          ####  
+######  SSD  #####
+#######     ######
+##################
+alias d="cd $HOME/Desktop;pwd" # icons on my Screen
+alias D="cd $HOME/.home/demo;pwd" # for learnings
+alias .home="cd $HOME/.home;pwd" 
+alias .bin="cd $HOME/.bin;pwd" # where my new self my are..
+alias bin="cd /usr/local/bin;pwd" # where most of my scripts are..
+# less used
+alias .photo="cd $HOME/Pictures/Screenshots ;O" # all Screenshots are save here+openInFileBrowser
+alias photo="cd $HOME/Pictures ;pwd"
+alias doc="cd $HOME/Documents;pwd"
+alias .p=".photo" # QuickOpen
+alias apps="cd /Applications/;pwd" # apps on MAC
+alias .help="cd ~/.help;pp" # try help my self
+alias dl="cd $HOME/Downloads;pwd" # Download for DLs
+alias dock="cd $HOME/ProDock;pwd" # folder in my dock
+## GitHub Places
+alias gitH="cd $HOME/Documents/DotFiles-GitHub.com/.All-DotFiles ; pwd ; echo 'Open GitBox for PushTo GitHub' ; echo -e '\033[36m+------------------------------------------------+ \n|\033[0m' ; ls -a"
+alias gitHub="cd $HOME/Documents/Dotfiles-GitHub.com ; pwd ; ls -a"
+alias gitHH="cd $HOME/Documents/Hotkeys-GitHub.com ; pwd ; ls"
+# More
+alias N="cd ~/.home/Notes;ls"
+alias a='cd /apps;pwd'
+# old ones
+#alias r="cd /volmues;pwd;ls" # see all Drives
+#alias a="cd /apps;pwd" # Quick Apps aliases
+#alias h="cd $HOME;file .*" # see all hides/unix files
+#alias .="cd ..;pwd" # One Folder UP
+#alias ..="cd ../..;pwd" # Two Folders UP
+#alias ...="cd ../../..;pwd" # Three Folders UP
+#alias ndoc="cd $HOME/.home/.NanoDoc;pwd" # nano.text.testings
+
+#######
+# HDD #
+#######
+alias Anime="cd /Volumes/MacProOSX6/Users/kdg/Movies/ANIME\ FULL\ SEASON\ TVSHOWS;pwd"
+alias torrent="cd /Volumes/MacProOSX6/Torrent.Folders/Done.Downloaded.Torrent;pwd"
+alias Pack="/Volumes/MacProOSX6/Pack's" # zip,iso,tar files place for backup,ing
+#-####-#
+# APPS # #apps
+#-####-#
+alias www="elinks" # exs: "www google.com" = www.google.com
+alias download="wget" # easy remmber it :-)
+alias ip="curl icanhazip.com"
+alias ipinfo="curl ipinfo.io"
+alias C="bc <<< "
+alias n="nano -v"
+alias emacs="/usr/local/bin/emacs"
+alias emacs-22.1="/usr/bin/emacs"
+alias emacs-25="cd $HOME ; /Applications/Emacs-25.1.app/Contents/MacOS/Emacs -nw"
+alias mumble="open -n /Applications/Mumble.app --args -m"
+alias bc="echo 'Basic Calulator \t quit = Exit' ; bc -q"
+alias bc.="bc <<<"
+alias Calc='f() { echo "$(( $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 ))" };f' # Bash & Zsh
+alias calc='python -ic "from __future__ import division; from math import *; from random import *"'
+alias calc2="bc" # bc=B-C=Basic-Calculator
+alias screen.="screen -D -R"
+alias disk="sudo iotop -C 5 10" # Sudo&Root:REQ
+alias firefox="open -a SeaMonkey.2.40 -g" # add + url
+alias macvim="/Applications/MacVim-snapshot-62/MacVim.app/Contents/MacOS/MacVim"
+alias gvim="macvim"
+alias sol="ttysolitaire -p 2000"
+# GUI to CLI Apps
+alias chrome='open -a "Google Chrome" '
+alias safari='open -a "Safari" '
+alias browser='open -a "MultiBrowser"'
+# not use much #
+alias alert="echo '\a \033[31mAlert'"
+alias .man="elinks www.manned.org" # need <elinks> to work + internett Conection
+alias irc="weechat-curses" # IRC-Client
+alias ,t="transmission-remote" # TorrentClient
+alias tl="transmission-remote -l" # TorrentClient
+alias ad="transmission-remote -a" # TorrentClient
+alias ,TD="transmission-daemon" # TorrentHost
+alias ,TDQuit="/Users/kdg/ProDock/\ \ \ \ Quit" # TorrentHost
+alias ,SS="CMatrix" # ScreenCaster
+alias tlf="w3m www.gulesider.no" # need w3m (webBrowser)
+alias ram="top -o rsize" # WebProcess=Safari
+alias ram-space='top -o vprvt' # command,rsize,vprvt"'
+#Screen-Clock
+alias miniwatch="watch.2 &" # make a easy -alias-
+alias MW="miniwatch" # my "Faorit" long time
+alias mx="wwwMXL.com" # go to a Webside
+# ehh
+alias tmuxfix="tmux kill-server" # get ridd of all tmux running and it take MB if it is too many
+alias K="killall"
+alias KK="pkill -9"
+alias FixTmux="tmux kill-server"
+alias FixTmux2="killall tmux; tmux"
+alias Q="killall"
+# ClipBoard:
+alias CC="| pbcopy" # hmm need works to work :P
+#Create a simple ``redo'' command to repeat previous entries in the command history file
+alias r='fc −s'
+alias :q="exit"
+alias E="exit"
+#
+
+
+# not using:
+# søk snaveier (search)
+alias søk="sudo find / -name"
+alias søkh="sudo find $HOME/ -name"
+alias sk="find /Volumes/ -name"
+
+# root
+# zsh
+#alias ZZZ="'PROMPT="%{$fg[cyan]%}| %{$fg[red]%}%n $ %{$fg[yellow]%}"'"
+alias HELLO="sudo zsh"
+# Close Terminal Window "like vim exit out"
+alias :q=" exit" 
+
+########################
+########################
+##  Package Managers  ##
+########################
+########################
+alias macS="fink list"
+alias macI="fink install"
+alias Mac="sudo dselect"
+
+# Brew.sh
+alias MacS="brew search" #(Search Package)
+alias MacI="brew install" #(Install Package)
+alias Maci="brew info" #(info about Package)
+alias MacD="brew doctor"
+##alias mac.Two.Most.Do.Next.UPS="sudo port -u -v upgrade outdated"
+alias mac.One.Most.Do.First.UPS="brew update"
+# not use much # # MAC PORTS:
+#alias macH="port list"
+#alias macinfo="port info"
+#alias macR="brew remove" # (Uninstall)
+#alias macL="brew list" #(machave) have installed on the mac
+# Web:http://techbase.kde.org/Getting_Started/Build/Mac_OS_X/MacPorts
+
+#########
+## pip ##
+#########
+
+alias pipS="pip search"
+alias pipI="sudo pip install"
+alias pipH="pip list" # have instlled
+alias pipU="sudo pip uninstall"
+
+# Ubuntu-MacPort;
+#alias apt-get_install="port -v" # sudo apt-get install "NAME"
+#alias apt-get_update="sudo port selfupdate"
+#alias apt-get_upgrade="sudo port -u -v upgrade outdated"
+#alias apt-cache_search="port search"
+#alias U="ubuntu"
+
+## Quick Alias :P
+alias tabs="open /Applications/Tabs.app"
+#alias todo="nano ~/.home/Notes/TODO.List/ToDoList.txt"
+alias xdg-open="open" # Lubuntu/LinuxOS
+#alias test="echo -e 'test\n\ntest'"
+#alias sn="sudo nano"
+alias app="XX_Apps"
+## nah?
+alias F="sudo find / -name"
+alias Find="find . -name"
+alias .man="w3mman"
+alias ssH="mosh"
+#alias Cat="man cat | cat"
+alias la="ls -a"
+
+alias ttt="TmuxHome.sh"
+#alias ee="cd $HOME/Desktop/.emacs ;pwd"
+alias V="vim"
+alias T="open -a XQuartz.app"
+#alias memo="() { ${EDITOR:-vim} ~/memo "$@"; }"
+# Fusions works
+#cs() { cd $1 ; ls } 
+#mk() { cd $HOME/Desktop ; mkdir $1 }
+#dt() { cd $HOME/Desktop ; touch $1 }
+
+#-# NANO #-#
+#alias .anano="nano $HOME/.home/.term_aliases" # for edit here :D
+# Edit With Nano
+#alias .lnano="nano $HOME/.bash_login" # AutoLogin on Mac
+#alias .bnano="nano $HOME/.bashrc" # to bash outlog or root
+#alias .pnano="nano $HOME/.profile" # Old autologin on Mac
+#alias .znano="nano $HOME/.zshrc" #anci color not works#
+#alias .fnano="nano $HOME/.home/.bash_functions"
+#alias .ffnano="nano $HOME/.home/.zsh_functions"
+#alias .pip="nano $HOME/.pip-nano"
+#alias .tnano="nano $HOME/.tmux.conf"
+#alias .Nano="nano $HOME/.profile2" #for Stuff Exstra
+#alias ,h="nano /usr/local/bin/.h" #try to make help
+
+

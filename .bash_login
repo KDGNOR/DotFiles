@@ -1,0 +1,101 @@
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+#-# Config For Bash $Home/.bash_login #-#
+#-#            By: KDGNOR             #-#
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+export LINE=+-----------------------------------+ #work in bashrc :D
+####################################
+####        HomeScreen         #####
+####################################
+HomeScreen () {
+	cd $HOME/.home
+	echo -e "\033[37m"
+	clear
+	date "+_____%d/%m/%Y_____" 
+	pwd
+	cal.2,1
+	echo -e "\033[37m$LINE \033[0m "
+	echo -e "\033[37m|\033[0m \033[1;34mi     \033[1;92mZ   \033[1;5;31m root\033[0m \033[0m      \033[36;1mU\033[0m  \033[1;30moldi          \033[37m | \033[0m "
+	echo -e "\033[37m$LINE \033[0m "
+}
+HomeScreen # Run function HomeScreen
+#.help - ,h
+####################################
+#1# PS1s-PROMPT-COMMAND 	     #1#
+####################################
+
+##############
+# GNU.Screen #
+##############
+if [ -z $STY ]
+then
+        PS1="\033[36m+-----------------------------------+ \n|\033[0m \033[37m\u $\033[0m "
+else  
+        PS1="\033[36m+-----------------------------------+ \n|\033[0m \033[1;30m\u $\033[0m "
+fi
+
+
+####################################
+#4#Exports     Exports    Exports#4#
+####################################
+export HISTSIZE=10000	                # 500 is default
+export HISTFILESIZE=1000000
+export HISTTIMEFORMAT='%b %d %I:%M %p ' # using strftime format
+export HISTCONTROL=ignoreboth           # ignoredups;ignorespace
+export HISTIGNORE="history:p:c:exit:ls:d:"
+
+# color text most for -LS-
+export CLICOLOR=0
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+# do $MYFIRSTNAME #
+#export MYFIRSTNAME='Kim Daniel'
+#export MYLASTNAME='Garshol'
+
+export LESSOPEN='|/opt/local/bin/lesspipe.sh %s'
+export LESS='-R' 
+
+# end of needed text
+
+####################################
+#2#    Functions-MyTricks        #2# 
+####################################
+
+function root {
+	cd /usr/local/bin
+	echo -e "\033[1;31m  sm\033[0m (SudoMode)"
+	pwd
+	sudo -s
+	PS1="\u sm"
+}
+
+# sudo su - = ps1=localhost:pwd root# _
+
+####################################
+#3# "Functions"			         #3# 
+####################################
+
+
+# cd and ls in one
+cl() {
+if [ -d "$1" ]; then
+	cd "$1"
+	ls
+	else
+	echo "bash: cl: '$1': Directory not found"
+fi
+}
+
+#=# bash_aliases need for alias to work #=#
+if [ -f ~/.home/.term_aliases ]; then
+. ~/.home/.term_aliases
+fi
+
+#=# bash_aliases need for alias to work #=#
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
+#export EDITOR=/usr/local/bin/T # do not open file ONLY the Program
+export EDITOR=/Users/kdg/.bin/subl # subl is not a Script
+export PATH="opt/local/bin:/opt/local/sbin:/bin:/usr/local/bin:/usr/local/sbin:/usr/local:/usr/bin:/bin:$HOME/.bin:$PATH"
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH # some apps need it
